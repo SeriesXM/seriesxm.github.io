@@ -1,0 +1,61 @@
+<html><head><style>
+body {background: grey url('https://i.redd.it/lfndtoirttvx.jpg')
+	no-repeat fixed; background-size: cover; font-family: sans-serif;}
+	button#open-popup {position: fixed; bottom: 20px; left: 20px;}
+		#popup {position: fixed; bottom: 100px; left: 40px; border-radius: 10px;
+		border: 2px solid grey; background-color: #e8f5ff; padding: 10px; text-align: center;}
+		#popup-content img {border: 2px solid grey; border-radius: 15px;}
+	button.main-button {border-radius: 20px; color: white; padding: 15px 10px;
+	background: linear-gradient(to bottom, #33cc33, #006622);
+	border-radius: 10px; font-weight: bold; text-shadow: 1px 1px 2px black; border: 1px solid white;}
+		.hidden {display: none;}
+	#close-popup {position: absolute; top: -15px; right: -15px; border-radius: 10px;
+	background-color: #cc0000; border: 1px solid white; width: 25px; height: 25px;
+	text-align: center; cursor: pointer;}
+		#close-popup-icon {color: white; font-size: 20px; line-height: 25px;}
+input[type=color]::-webkit-color-swatch {border: 2px solid #000330;
+	border-radius: 15px;}
+input[type=color] {border: none; width: 90%; height: 50px;
+	background: center center no-repeat;}
+</style></head><body>
+<button id="open-popup" type="button" class="main-button">Change Background</button>
+<div id="popup" class="hidden">
+	<div id="popup-content"><h3>Pick a new background image:</h3>
+	<img id="close-popup-1" src="https://i.redd.it/vvtlvxh9x9m71.jpg" onclick="W1()" width="125" height="65">
+    <img id="close-popup-2" src="https://i.redd.it/c3uhsgo1vx541.jpg" onclick="W2()" width="125" height="65">
+    <img id="close-popup-3" src="https://i.redd.it/g0ytxg0rmwx31.jpg" onclick="W3()" width="125" height="65"><br>
+    <img id="close-popup-4" src="https://i.redd.it/uh2y22d7vzr61.jpg" onclick="W4()" width="125" height="65">
+    <img id="close-popup-5" src="https://i.redd.it/035qfd5e0pmx.jpg" onclick="W5()" width="125" height="65">
+    <img id="close-popup-6" src="https://i.redd.it/qs94lw6xa4601.jpg" onclick="W6()" width="125" height="65"><br>
+    <img id="close-popup-7" src="https://i.redd.it/jvs9j0xke0f61.jpg" onclick="W7()" width="125" height="65">
+    <img id="close-popup-8" src="https://i.redd.it/sipnpt3446161.jpg" onclick="W8()" width="125" height="65">
+    <img id="close-popup-9" src="https://i.redd.it/dw5ub61tk6ga1.jpg" onclick="W9()" width="125" height="65"><br>
+    <img id="close-popup-10" src="https://i.redd.it/jx0cehys3yr31.jpg" onclick="W10()" width="125" height="65">
+    <img id="close-popup-11" src="https://i.redd.it/88g2505pqbgz.jpg" onclick="W11()" width="125" height="65">
+    <img id="close-popup-12" src="https://i.redd.it/lfndtoirttvx.jpg" onclick="W12()" width="125" height="65">
+	<br><br><h3>Pick a solid background color:<h3>
+	<input id="colorpicker" type="color" value="#1042ab" oninput="updateBackground( this )"></div>
+	<div id="close-popup" onclick="closePopup()"><div id="close-popup-icon">&times;</div></div>
+</div><script>
+const openPopupBtn = document.querySelector('#open-popup'); const popup = document.querySelector("#popup");
+function openPopup() {popup.classList.remove('hidden');} function closePopup() {popup.classList.add('hidden');}
+openPopupBtn.addEventListener("click", function() {if (popup.classList.contains('hidden'))
+	{openPopup();} else {closePopup();}});
+const closePopupBtns = [...document.querySelectorAll('[id^=close-popup-]')];
+closePopupBtns.forEach(btn => {btn.addEventListener('click', closePopup);});
+function W1() {document.body.style.backgroundImage="url('https://i.redd.it/vvtlvxh9x9m71.jpg')";}
+function W2() {document.body.style.backgroundImage="url('https://i.redd.it/c3uhsgo1vx541.jpg')";}
+function W3() {document.body.style.backgroundImage="url('https://i.redd.it/g0ytxg0rmwx31.jpg')";}
+function W4() {document.body.style.backgroundImage="url('https://i.redd.it/uh2y22d7vzr61.jpg')";}
+function W5() {document.body.style.backgroundImage="url('https://i.redd.it/035qfd5e0pmx.jpg')";}
+function W6() {document.body.style.backgroundImage="url('https://i.redd.it/qs94lw6xa4601.jpg')";}
+function W7() {document.body.style.backgroundImage="url('https://i.redd.it/jvs9j0xke0f61.jpg')";}
+function W8() {document.body.style.backgroundImage="url('https://i.redd.it/sipnpt3446161.jpg')";}
+function W9() {document.body.style.backgroundImage="url('https://i.redd.it/dw5ub61tk6ga1.jpg')";}
+function W10() {document.body.style.backgroundImage="url('https://i.redd.it/jx0cehys3yr31.jpg')";}
+function W11() {document.body.style.backgroundImage="url('https://i.redd.it/88g2505pqbgz.jpg')";}
+function W12() {document.body.style.backgroundImage="url('https://i.redd.it/lfndtoirttvx.jpg')";}
+function updateBackground( e ) {document.body.style.backgroundImage="url('xxxx')";
+document.body.style.backgroundColor = e.value; popup.classList.add('hidden');}
+function closePopup() {const popup = document.querySelector("#popup"); popup.classList.add("hidden");}
+</script></body></html>
