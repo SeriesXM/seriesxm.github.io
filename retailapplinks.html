@@ -1,14 +1,14 @@
 <html><title>Retail Apps</title><head></head>
-<style>
+<style> /* ALL FONT SIZE SETTINS */
 
-/* ALL FONT SIZE SETTINS */
-	a.a:link, a.a:visited {font-size: 16px;}
-	a.b:link, a.b:visited {font-size: 16px;}
-	a.c:link, a.c:visited {font-size: 10px;}
-	.smt {font-size: 9px;}
-	body {font-size: 14px;}
+a.a:link, a.a:visited {font-size: 16px;}
+a.b:link, a.b:visited {font-size: 16px;}
+a.c:link, a.c:visited {font-size: 10px;}
+.smt {font-size: 9px;}
+body {font-size: 14px;}
 
-/* TEXT OUTLINE *//* 1 px shadow left, top, right, bottom */
+</style>
+<style> /* TEXT OUTLINE *//* 1 px shadow left, top, right, bottom */
 
 h1, h2, p {text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	color: white;
@@ -16,7 +16,8 @@ h1, h2, p {text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	text-align: center
 	}
 
-/* LINKS */
+</style>
+<style> /* LINKS */
 
 a:link, a:visited {border-radius: 25px;
 	display: inline-block;
@@ -42,7 +43,9 @@ a.a:hover, a.a:active {background-color: #0066cc;}
 a.b:hover, a.b:active {background-color: #235511;}
 a.c:hover, a.c:active {background-color: #333e8a;}
 
-/* WALLPAPER AND BODY TEXT */
+
+</style>
+<style> /* WALLPAPER AND BODY TEXT */
 
 body {background: grey url('images/xboxwallpaper1.jpg') no-repeat fixed;
 	background-size: cover;
@@ -50,7 +53,8 @@ body {background: grey url('images/xboxwallpaper1.jpg') no-repeat fixed;
 	font-family: sans-serif;
 	}
 
-/* TABLE SETTINGS */
+</style>
+<style> /* TABLE SETTINGS */
 
 td {background-color: rgba(255, 255, 255, 0.3);
 	border: 2px solid #333333;
@@ -69,7 +73,43 @@ td.nothing {background-color: rgba(255, 255, 255, 0.0);
 	}
 
 </style>
+<style> /* ENTRY BUTTON */
+
+	#password-button {
+		background-color: #4CAF50;
+		border: 3px solid #3e8e41;
+		border-radius: 15px;
+		color: white;
+		cursor: pointer;
+		font-size: 48px;
+		padding: 20px 35px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	#password-button:hover {background-color: #3e8e41;}
+
+</style>
+<script>
+
+	function checkPassword() {
+		var password = prompt("Please enter the password:");
+		if (password == "xxx") {
+			document.getElementById("password-button").style.display = "none";
+			document.getElementById("content").style.display = "block";
+		} else {
+			alert("Incorrect password, access denied.");
+			}
+		}
+
+</script>
+
 <body>
+
+	<button id="password-button" onclick="checkPassword()">Enter</button>
+	<div id="content" style="display:none; text-align:center;">
 
 	<h1>Retail Apps</h1>
 		<p>Make sure you RUN THE APPS IMMEDIATELY after downloading!!!!!!<br><br>
@@ -113,6 +153,8 @@ td.nothing {background-color: rgba(255, 255, 255, 0.0);
 	</tr>
 
 	</table>
+
+	</div>
 
 </body>
 </html>
