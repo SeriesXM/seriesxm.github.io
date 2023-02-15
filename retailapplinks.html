@@ -24,6 +24,7 @@ a:link, a:visited {border-radius: 25px;
 	padding: 8px 15px;
 	text-align: center;
 	text-decoration: none;
+	transition: all 0.1s ease-in-out;
 	}
 
 a.a:link, a.a:visited {background-color: #3399ff;
@@ -75,7 +76,7 @@ td.nothing {background-color: rgba(255, 255, 255, 0.0);
 </style>
 <style> /* ENTRY BUTTON */
 
-	#password-button {
+	#pword-btn {
 		background-color: #4CAF50;
 		border: 3px solid #3e8e41;
 		border-radius: 15px;
@@ -87,9 +88,10 @@ td.nothing {background-color: rgba(255, 255, 255, 0.0);
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		transition: all 0.2s ease-in-out;
 	}
 	
-	#password-button:hover {background-color: #3e8e41;}
+	#pword-btn:hover {background-color: #3e8e41; font-size: 60px;}
 
 </style>
 <script>
@@ -97,7 +99,7 @@ td.nothing {background-color: rgba(255, 255, 255, 0.0);
 	function checkPassword() {
 		var password = prompt("Please enter the password:");
 		if (password == "xxx") {
-			document.getElementById("password-button").style.display = "none";
+			document.getElementById("pword-btn").style.display = "none";
 			document.getElementById("content").style.display = "block";
 		} else {
 			alert("Incorrect password, access denied.");
@@ -108,7 +110,7 @@ td.nothing {background-color: rgba(255, 255, 255, 0.0);
 
 <body>
 
-	<button id="password-button" onclick="checkPassword()">Enter</button>
+	<button id="pword-btn" onclick="checkPassword()">Enter</button>
 	<div id="content" style="display:none; text-align:center;">
 
 	<h1>Retail Apps</h1>
